@@ -11,7 +11,7 @@
 (setq explicit-shell-file-name (getenv "GIT_BASH"))
 (setq shell-file-name explicit-shell-file-name)
 ;; Environment variable pointing to the path of GIT_BASH and GNU_GLOBAL
-(add-to-list 'exec-path (getenv "GIT_BASH"))
+(add-to-list 'exec-path (getenv "GIT_BASH_PATH"))
 (add-to-list 'exec-path (getenv "GNU_GLOBAL"))
 ;; Prevent issues with the Windows null device (NUL)
 ;; when using git-bash find with rgrep.
