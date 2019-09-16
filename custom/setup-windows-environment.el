@@ -29,7 +29,7 @@
   (setq sehll-file-name explicit-shell-file-name)
   (pop-to-buffer (get-buffer-create (generate-new-buffer-name name)))
   (shell (current-buffer))
-  (setq explicit-shell-file-name (getentv "GIT_BASH"))
+  (setq explicit-shell-file-name (getenv "GIT_BASH"))
   (setq shell-file-name explicit-shell-file-name))
 
 ;; If we need to change the shell to cmd.exe let's add a function for that
