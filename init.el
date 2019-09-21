@@ -29,7 +29,7 @@
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
    (quote
-    (markdown-mode markdown-mode+ markdown-toc flx-ido smex anzu dtrt-indent ggtags rainbow-delimiters yaml-mode magit nyan-mode volatile-highlights yasnippet)))
+    (counsel counsel-gtags ivy markdown-mode markdown-mode+ markdown-toc anzu dtrt-indent ggtags rainbow-delimiters yaml-mode magit nyan-mode volatile-highlights yasnippet)))
  '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

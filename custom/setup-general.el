@@ -15,3 +15,6 @@
 
 ;; We don't need to see the startup every time.
 (setq inhibit-startup-screen t)
+
+;; Save bookmarks every time we modify them
+(setq bookmark-save-flag 1)

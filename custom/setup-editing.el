@@ -16,8 +16,8 @@
 (require 'anzu)
 (global-anzu-mode 1)
 ;; Make it our default
-(global-set-key [remap query-replace] 'anzu-query-replace)
-(global-set-key [remap-query-replace-regexp] 'anzu-query-replace-regexp)
+(global-set-key [remap iquery-replace] 'anzu-query-replace)
+(global-set-key [remap iquery-replace-regexp] 'anzu-query-replace-regexp)
 
 
 ;; Require yasnippet. Useful for inserting commonly used snippets of code
@@ -40,24 +40,17 @@
 			   (electric-indent-mode -1)
 			   (setq tab-stop-list (number-sequence 4 10 4))))
 
-(require 'ido)
-(setq ido-enable-prefix nil
-      ido-enable-flex-matching t
-      ido-create-new-buffer ' always
-      ido-use-filename-at-point 'guess
-      ido-max-prospects 10
-      ido-default-file-method ' selected-window
-      ido-auto-merge-work-directories-length -1)
-(ido-mode +1)
+;; Ivy as a better completion tool
+(require 'ivy)
 
+;; From oremacs.com/swiper/
+(ivy-mode 1)
+(setq ivy-use-virtual-buffers t)
+(setq ivy-count-format "(%d%d) ")
 
-(ido-everywhere +1)
-(flx-ido-mode +1)
-(setq ido-use-faces nil)
-
-(require 'smex)
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-x") ' smex-major-mode-commands)
+(global-set-key (kbd "C-s") 'swiper)
+(global-set-key (kbd "M-x") 'counsel-M-x)
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)
 
 (require 're-builder)
 (setq reb-re-syntax 'string)
