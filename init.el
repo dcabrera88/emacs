@@ -8,15 +8,24 @@
 ;; This is the location where we will put all of our actual configuration files
 (add-to-list 'load-path "~/.emacs.d/custom/")
 
+;; This is the location where we will put all of our computer dependent settings
+;; i.e. work computer might have some folders that I don't want to publish
+;; to github.
+(add-to-list 'load-path "~/emacs-local/")
+
 (defconst *is-windows* (eq system-type 'windows-nt))
 
-;; load the modules
+;; Computer specific setup
+(require 'setup-local)
+
+;; Common setup
 (require 'setup-appearance)
 (require 'setup-general)
 (require 'setup-ggtags)
 (require 'setup-editing)
 (require 'setup-org)
 
+;; OS specific setup
 (when *is-windows*
   (require 'setup-windows-environment))
 
@@ -30,7 +39,7 @@
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
    (quote
-    (csharp-mode counsel counsel-gtags ivy markdown-mode markdown-mode+ markdown-toc anzu dtrt-indent ggtags rainbow-delimiters yaml-mode magit nyan-mode volatile-highlights yasnippet)))
+    (company csharp-mode counsel counsel-gtags ivy markdown-mode markdown-mode+ markdown-toc anzu dtrt-indent ggtags rainbow-delimiters yaml-mode magit nyan-mode volatile-highlights yasnippet)))
  '(show-paren-mode t))
 (put 'downcase-region 'disabled nil)
 (custom-set-faces
