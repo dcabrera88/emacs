@@ -48,13 +48,15 @@
 (setq ivy-use-virtual-buffers t)
 (setq ivy-count-format "(%d%d) ")
 
+(setq ivy-use-selectable-prompt t)
+
 (global-set-key (kbd "C-s") 'swiper)
 (global-set-key (kbd "M-x") 'counsel-M-x)
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
 
+;;Autocompletion through company
+(add-hook 'after-init-hook 'global-company-mode)
+
 ;; Avoid having to use two backslashes during re-builder.
 (require 're-builder)
 (setq reb-re-syntax 'string)
-
-;;Autocompletion through company
-(add-hook 'after-init-hook 'global-company-mode)

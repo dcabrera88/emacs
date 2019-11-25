@@ -18,3 +18,9 @@
 
 ;; Save bookmarks every time we modify them
 (setq bookmark-save-flag 1)
+
+;; Allow moving across windows
+(global-set-key (kbd "<f8> a")  'windmove-left)
+(global-set-key (kbd "<f8> d") 'windmove-right)
+(global-set-key (kbd "<f8> w")    'windmove-up)
+(global-set-key (kbd "<f8> s")  'windmove-down)

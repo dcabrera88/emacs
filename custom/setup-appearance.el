@@ -13,8 +13,15 @@
 ;; Remove superfluous thins in the editor
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
+
+;; Show colum number and line numbers.
 (column-number-mode 1)
 (global-display-line-numbers-mode t)
+
+;; Have lines truncated by default
+(set-default 'truncate-lines t)
+
+;; No need to blink the cursor it's mostly a distraction.
 (blink-cursor-mode -1)
 
 ;; Nyan cat for Nyan-ness
@@ -34,7 +41,7 @@
 ;;Highlight the matching parenthesis
 (show-paren-mode 1)
 
-;; Show matching parenthesis or delimiters in different collors
+;; Show matching parenthesis or delimiters in different colors
 (require 'rainbow-delimiters)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
@@ -43,5 +50,5 @@
 (require 'volatile-highlights)
 (volatile-highlights-mode t)
 
-;; I like this font
-(set-face-attribute 'default nil :family "Consolas" :height 105)
+;; I like this font. Works well on a 32in 4k monitor.
+(set-face-attribute 'default nil :family "Consolas" :height 115)

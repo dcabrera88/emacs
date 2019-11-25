@@ -39,7 +39,7 @@
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
    (quote
-    (company csharp-mode counsel counsel-gtags ivy markdown-mode markdown-mode+ markdown-toc anzu dtrt-indent ggtags rainbow-delimiters yaml-mode magit nyan-mode volatile-highlights yasnippet)))
+    (unfill company csharp-mode counsel counsel-gtags ivy markdown-mode markdown-mode+ markdown-toc anzu dtrt-indent ggtags rainbow-delimiters yaml-mode magit nyan-mode volatile-highlights yasnippet)))
  '(show-paren-mode t))
 (put 'downcase-region 'disabled nil)
 (custom-set-faces
@@ -53,3 +53,4 @@
  '(rainbow-delimiters-depth-4-face ((t (:inherit rainbow-delimiters-base-face :foreground "HotPink1"))))
  '(rainbow-delimiters-depth-5-face ((t (:inherit rainbow-delimiters-base-face :foreground "deep sky blue"))))
  '(rainbow-delimiters-unmatched-face ((t (:inherit rainbow-delimiters-base-face :foreground "firebrick1")))))
+(put 'upcase-region 'disabled nil)
