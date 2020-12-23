@@ -26,7 +26,7 @@
   "Open a shell using the windows cmd.exe"
   (interactive "MName of the cmd shell to create: ")
   (setq explicit-shell-file-name (getenv "ComSpec"))
-  (setq sehll-file-name explicit-shell-file-name)
+  (setq shell-file-name explicit-shell-file-name)
   (pop-to-buffer (get-buffer-create (generate-new-buffer-name name)))
   (shell (current-buffer))
   (setq explicit-shell-file-name (getenv "GIT_BASH"))
