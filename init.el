@@ -1,7 +1,7 @@
 ;; Add and enable MELPA
 (require 'package)
 (add-to-list 'package-archives
-	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
+	     '("melpa" . "http://stable.melpa.org/packages/") t)
 (package-initialize)
 
 ;; Add the modules path
@@ -29,7 +29,6 @@
 (when *is-windows*
   (require 'setup-windows-environment))
 
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -39,7 +38,7 @@
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
    (quote
-    (unfill company csharp-mode counsel counsel-gtags ivy markdown-mode markdown-mode+ markdown-toc anzu dtrt-indent ggtags rainbow-delimiters yaml-mode magit nyan-mode volatile-highlights yasnippet)))
+    (org-jira tramp flycheck py-autopep8 elpy groovy-mode unfill company csharp-mode counsel counsel-gtags ivy markdown-mode markdown-mode+ markdown-toc anzu dtrt-indent ggtags rainbow-delimiters yaml-mode magit nyan-mode volatile-highlights yasnippet)))
  '(show-paren-mode t))
 (put 'downcase-region 'disabled nil)
 (custom-set-faces
