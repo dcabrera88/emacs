@@ -51,4 +51,4 @@
 (volatile-highlights-mode t)
 
 ;; I like this font. Works well on a 32in 4k monitor.
-(set-face-attribute 'default nil :family "Consolas" :height 115)
+(set-face-attribute 'default nil :height 115)
