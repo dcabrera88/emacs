@@ -43,3 +43,11 @@
 ;; Add any org agenda file as a possible refile target
 (setq org-refile-targets '((nil :maxlevel . 9)
                            (org-agenda-files :maxlevel . 9)))
+
+(setq org-capture-templates
+      '(("t" "Todo" entry (file org-default-notes-file)
+        "* TODO %?\n %i\n %a")
+       ("n" "Note" entry (file org-default-notes-file)
+        "* %?\n %i\n %a\n %U\n")
+       ("j" "Journal" entry (file+olp+datetree "Journal2021.org")
+        "* %?\n Entered on %U\n")))
