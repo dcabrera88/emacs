@@ -18,17 +18,11 @@
 (setq org-default-notes-file (concat org-directory "/inbox.org"))
 (setq org-agenda-files (directory-files-recursively org-directory ".org$"))
 
-(defun org-add-refin ()
+(defun org-add-link ()
   (interactive)
-  (let (refin)
-    (setq refin (read-string "Enter value to append to REFIN property: "))
-    (org-entry-add-to-multivalued-property (point) "REFIN" refin)))
-
-(defun org-add-refout ()
-  (interactive)
-  (let (refout)
-    (setq refout (read-string "Enter value to append to REFOUT property: "))
-    (org-entry-add-to-multivalued-property (point) "REFOUT" refout)))
+  (let (link)
+    (setq refin (read-string "Enter value to append to LINK property: "))
+    (org-entry-add-to-multivalued-property (point) "LINK" refin)))
 
 (defun org-add-date-update ()
   (interactive)
